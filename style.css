@@ -18,7 +18,6 @@ body {
   background-color: var(--dark-color);
   overflow: hidden;
   perspective: 1000px;
-  font-family: 'Be Vietnam Pro', sans-serif;
 }
 .night {
   position: fixed;
@@ -1701,80 +1700,3 @@ body {
     opacity: 1;
   }
 }
-/* Valentine Card Styles */
-.valentine-card {
-  position: absolute;
-  top: 50%;         /* Đưa lên giữa chiều dọc */
-  left: 40px;       /* Vẫn giữ bên trái */
-  transform: translateY(-50%); /* Căn giữa hoàn chỉnh theo chiều dọc */
-  width: 300px;
-  height: 250px;
-  perspective: 1000px;
-  cursor: pointer;
-  z-index: 10;
-  opacity: 0;
-  animation: fadeInUp 2s ease forwards;
-  animation-delay: 2s;
-
-}
-
-.card-front, .card-inner {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  background: #ffcce0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  backface-visibility: hidden;
-  transition: transform 1s;
-}
-
-.card-front {
-  font-family: 'Comic Sans MS', cursive;
-  font-size: 1.2rem;
-  font-weight: bold;
-  flex-direction: column;
-}
-
-.card-inner {
-  transform: rotateY(180deg);
-}
-
-.valentine-card.open .card-front {
-  transform: rotateY(180deg);
-}
-
-.valentine-card.open .card-inner {
-  transform: rotateY(0deg);
-}
-
-
-
-.card-right {
-  background-color: #ffe6f0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;   /* Căn giữa theo chiều dọc */
-  align-items: center;       /* Căn giữa theo chiều ngang */
-  font-family: 'Georgia', serif;
-  font-size: 1rem;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-  height: 100%;
-}
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
